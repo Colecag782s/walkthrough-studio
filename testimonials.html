@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Testimonials — Walkthrough Studio</title>
+<meta name="description" content="What operators say after they have seen one of their own listings turned into a cinematic walkthrough. Real words from real clients, published as they come in.">
+<meta name="theme-color" content="#0A0A0B">
+<meta name="author" content="Cole — Walkthrough Studio">
+
+<meta property="og:type" content="website">
+<meta property="og:title" content="Testimonials — Walkthrough Studio">
+<meta property="og:description" content="What operators say after they have seen one of their own listings in motion.">
+<meta property="og:image" content="img/hero-estate.jpg">
+<meta name="twitter:card" content="summary_large_image">
+
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' rx='24' fill='%23C8873C'/%3E%3Cpath d='M16 26 L34 74 L50 44 L66 74 L84 26' fill='none' stroke='%230A0A0B' stroke-width='12' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E">
+<link rel="stylesheet" href="css/site.css">
+</head>
+
+<body>
+
+<a class="skip-link" href="#quotes">Skip to the testimonials</a>
+
+<!-- ================================================================== 00 · PRELOADER -->
+<div class="preload" id="preload">
+  <div class="preload-in">
+    <div class="mono-mark">
+      <svg viewBox="0 0 100 100" aria-hidden="true">
+        <path class="w-a" d="M16 24 L34 74 L50 42"/>
+        <path class="w-b" d="M50 42 L66 74 L84 24"/>
+      </svg>
+    </div>
+    <div class="preload-name">Walkthrough Studio</div>
+    <div class="preload-pct" id="preloadPct">00</div>
+  </div>
+</div>
+
+<div class="ambient" aria-hidden="true"></div>
+<div class="grain" aria-hidden="true"></div>
+<div class="cursor" id="cursor" aria-hidden="true"><span class="label">PLAY</span></div>
+<div class="progress" id="progress" aria-hidden="true"></div>
+
+
+<!-- ================================================================== NAV -->
+<header class="nav solid" id="nav">
+  <div class="wrap nav-in">
+    <a class="brand" href="index.html" aria-label="Walkthrough Studio, home">
+      <span class="brand-mark">
+        <svg viewBox="0 0 100 100" aria-hidden="true">
+          <path class="w-a" d="M16 24 L34 74 L50 42"/>
+          <path class="w-b" d="M50 42 L66 74 L84 24"/>
+        </svg>
+      </span>
+      <span class="brand-txt">Walkthrough Studio<span>Cinematic property video</span></span>
+    </a>
+
+    <!-- No id="navLinks" here on purpose: the scroll-spy in site.js only runs on
+         the one-page site, and without it the current-page link keeps .active. -->
+    <nav class="nav-links" aria-label="Sections">
+      <a href="index.html#work">Work</a>
+      <a href="index.html#compare">Walkthroughs</a>
+      <a href="index.html#process">Process</a>
+      <a href="index.html#craft">Craft</a>
+      <a class="active" href="testimonials.html" aria-current="page">Testimonials</a>
+      <a href="index.html#faq">FAQ</a>
+    </nav>
+
+    <a class="btn btn-solid nav-cta" href="book.html" data-book><span data-book-label="short">Book a Call</span><span class="arrow">→</span></a>
+
+    <button class="nav-toggle" id="navToggle" aria-label="Open menu" aria-expanded="false" aria-controls="drawer">
+      <i></i><i></i>
+    </button>
+  </div>
+</header>
+
+<div class="drawer" id="drawer">
+  <a href="index.html#work">Work</a>
+  <a href="index.html#compare">Better walkthroughs</a>
+  <a href="index.html#process">Process</a>
+  <a href="index.html#craft">Craft</a>
+  <a href="testimonials.html">Testimonials</a>
+  <a href="index.html#faq">FAQ</a>
+  <a class="drawer-book" href="book.html" data-book><span data-book-label>Book a Call</span></a>
+  <div class="drawer-contact" id="drawerContact"></div>
+</div>
+
+
+<main id="top">
+
+<!-- ================================================================== 01 · PAGE HEAD -->
+<section class="page-head">
+  <div class="wrap page-head-in">
+    <div class="hero-tag rise" data-rise="1">
+      <span class="dot"></span><span>Client words, published as they come in</span>
+    </div>
+
+    <h1 class="display d-xl">
+      <span class="mask"><span class="word">In</span> <span class="word">their</span></span>
+      <span class="mask"><span class="word amber">own</span> <span class="word amber">words.</span></span>
+    </h1>
+
+    <p class="hero-sub rise" data-rise="2">
+      Every quote on this page comes from someone who sent me one of their own listings
+      and watched it come back as a walkthrough. Nothing here is written by me.
+    </p>
+
+    <div class="hero-foot rise" data-rise="3">
+      <div class="hero-meta">
+        <div><b>Real clients</b>No stock quotes</div>
+        <div><b>Their words</b>Published as sent</div>
+        <div><b>Named</b>Company and role shown</div>
+      </div>
+      <div class="t-count" id="tCount"></div>
+    </div>
+  </div>
+</section>
+
+
+<!-- ================================================================== 02 · THE QUOTES -->
+<section class="section" id="quotes">
+  <div class="wrap">
+    <div class="eyebrow" data-reveal="fade">
+      <span class="num">01</span><span>Testimonials</span><span class="bar"></span>
+    </div>
+
+    <div class="t-grid" id="tGrid"></div>
+  </div>
+</section>
+
+
+<!-- ================================================================== 03 · OFFER -->
+<section class="section offer" id="offer">
+  <div class="wrap offer-in">
+    <h2 class="display d-lg" data-reveal>
+      Judge the work,<br>not <span class="amber">the reviews.</span>
+    </h2>
+    <p class="lede" data-reveal data-reveal-delay="120">
+      Quotes are somebody else's listing. Send me one of yours and I will build the
+      walkthrough before we ever speak — free, on a real property of your own. You keep the
+      files whether or not you pay me anything, and then you can decide what a testimonial
+      of your own would say.
+    </p>
+    <div class="hero-cta" style="justify-content:center" data-reveal data-reveal-delay="220">
+      <a class="btn btn-solid" href="index.html#book" data-magnetic>
+        <span>Send your first listing</span><span class="arrow">→</span>
+      </a>
+      <a class="btn" href="index.html#work" data-magnetic>
+        <span>See the work</span><span class="arrow">→</span>
+      </a>
+    </div>
+    <p class="offer-note" data-reveal="fade" data-reveal-delay="300">
+      No contract · No card · The file is yours either way
+    </p>
+  </div>
+</section>
+
+</main>
+
+
+<!-- ================================================================== 04 · FOOTER -->
+<footer class="footer">
+  <div class="wrap">
+    <div class="footer-top">
+      <h2 class="footer-word" data-reveal>Walkthrough<br>Studio</h2>
+
+      <div class="footer-cols">
+        <div class="footer-col" data-reveal="fade" data-reveal-delay="80">
+          <h4>Sections</h4>
+          <a href="index.html#work">The work</a>
+          <a href="index.html#compare">Better walkthroughs</a>
+          <a href="index.html#process">How it works</a>
+          <a href="index.html#craft">The craft</a>
+          <a href="testimonials.html">Testimonials</a>
+          <a href="index.html#faq">FAQ</a>
+        </div>
+        <div class="footer-col" data-reveal="fade" data-reveal-delay="150">
+          <h4>Contact</h4>
+          <div id="footerContact"></div>
+        </div>
+        <div class="footer-col" data-reveal="fade" data-reveal-delay="220">
+          <h4>Get started</h4>
+          <a href="book.html" data-book><span data-book-label>Book a Call</span></a>
+          <a href="index.html#offer">Free sample walkthrough</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="footer-bot">
+      <span>&copy; <span id="year"></span> Walkthrough Studio · <span id="basedIn"></span></span>
+      <a class="to-top" href="#top"><span class="a">↑</span><span>Back to top</span></a>
+    </div>
+  </div>
+</footer>
+
+<script src="js/config.js"></script>
+<script src="js/site.js"></script>
+</body>
+</html>

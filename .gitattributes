@@ -1,0 +1,11 @@
+# GitHub Pages reads CNAME as a single bare hostname - keep it LF-only.
+CNAME text eol=lf
+*.html text eol=lf
+*.css  text eol=lf
+*.js   text eol=lf
+*.md   text eol=lf
+
+# Keep media bytes untouched.
+*.mp4 binary
+*.jpg binary
+*.png binary
