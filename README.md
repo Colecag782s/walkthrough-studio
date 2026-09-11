@@ -389,31 +389,62 @@ Then open the `localhost` address it prints. Press `Ctrl+C` to stop.
 
 ---
 
-## 7. Put it online
+## 7. It is online — and how to push a change
 
-The whole `website` folder is the site. Any static host works.
+The site is live on **GitHub Pages**, from the repo
+[Colecag782s/walkthrough-studio](https://github.com/Colecag782s/walkthrough-studio),
+served at **walkthroghstudiohq.com**.
 
-**Netlify Drop — easiest, no account needed to test**
-1. Go to [app.netlify.com/drop](https://app.netlify.com/drop)
-2. Drag the `website` folder onto the page
-3. It's live in about ten seconds on a temporary address
-4. Make a free account to keep it and connect a custom domain
+### Publishing a change
 
-**Cloudflare Pages** — free, fast, good for video. Create a project, choose *Direct
-Upload*, drag the folder in.
+This is the one thing that changed now the site is live. Editing `js/config.js`
+and refreshing still shows you the change **on your own machine**. To put it in
+front of the public you have to push it:
 
-**GitHub Pages** — free, but you need a repo and it's the fiddliest of the three.
+```bash
+cd "c:/Users/noahi/lead generation/website"
+git add -A
+git commit -m "add the Riverside Loft walkthrough"
+git push
+```
 
-Both Netlify and Cloudflare serve `book.html` at `/book` automatically, so you can hand out
-`walkthroughstudio.com/book` as a clean booking link in emails and DMs.
+Give it about a minute and the live site updates itself. There is no build to run.
 
-### After it's live
+If you would rather not touch a terminal, edit `js/config.js` directly on
+github.com — open the file, click the pencil icon, edit, then **Commit changes**.
+Same result.
 
-Update the outreach apps so your emails link to it. In each console's Settings, set the
-**calendar link** field to your `/book` URL — `outreach/` (port 4300),
-`shortform-outreach/` (4303), `fb-outreach/` (4302) and `x-outreach/` (4301) all have that
-field and all of them are currently blank, which is why no email you've sent has had a
-booking link in it.
+### Where things live
+
+| | |
+|---|---|
+| Live site | `https://walkthroghstudiohq.com` |
+| Booking page | `https://walkthroghstudiohq.com/book` |
+| Repo | `https://github.com/Colecag782s/walkthrough-studio` |
+| DNS | Namecheap → Domain List → Manage → Advanced DNS |
+
+The `CNAME` file in this folder is what tells GitHub which domain to answer on.
+**Do not delete it** — if it goes, the custom domain stops working.
+
+### The DNS records
+
+At Namecheap, under **Advanced DNS**, the domain needs these and nothing else
+pointing at the root. Delete Namecheap's default parking records first.
+
+| Type | Host | Value |
+|---|---|---|
+| A | @ | 185.199.108.153 |
+| A | @ | 185.199.109.153 |
+| A | @ | 185.199.110.153 |
+| A | @ | 185.199.111.153 |
+| CNAME | www | colecag782s.github.io. |
+
+Those four addresses are GitHub's, not specific to this site — they stay the same
+if you ever move to a different domain.
+
+### Moving to a different domain later
+
+Change the single line in `CNAME`, push, then repoint DNS at the registrar.
 
 ---
 
